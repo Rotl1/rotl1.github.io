@@ -1,4 +1,5 @@
 let myImage = document.querySelector('img');
+let message = "Dragon Ball super is cool, "
 
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
@@ -18,7 +19,7 @@ function setUserName() {
       setUserName();
     } else {
       localStorage.setItem('name', myName);
-      myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+      myHeading.innerHTML = message + myName;
     }
   }
 
@@ -26,7 +27,7 @@ function setUserName() {
     setUserName();
   } else {
     let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Mozilla is cool, ' + storedName;
+    myHeading.textContent = message + storedName;
   }
 
   myButton.onclick = function() {
